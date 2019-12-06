@@ -1,0 +1,468 @@
+html, body{
+    overflow-x: hidden;
+}
+
+h3{
+    font-weight: bold;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a:hover{
+    color: orangered;
+}
+h1 {
+    font-weight: normal;
+}
+header{
+    border-bottom: solid lightgray 0.5px;
+}
+nav span{
+    display: block;
+    font-size: 12px;
+    color: gray;
+}
+ #crear .form-control{
+    font-weight: lighter;
+    border: none;
+}
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+}
+
+.navbar ul li img{
+    align: left; 
+}
+
+.navbar ul li form{
+    text-align: center;
+}
+.modal-header{
+    display: inline;
+}
+.card{
+    border: none;
+}
+.image_background{
+    background-image: url(https://img1.etsystatic.com/site-assets/vesta-homepage-headers-v3/jewelry_ep_2020x335.4.jpg);
+    background-size: cover;
+
+}
+.background_color{
+    background-color: #FDEBD2 !important;
+}
+.center{
+    text-align: center;
+}
+.card-text{
+    text-align: center;
+}
+.margin-auto{
+    margin: auto;
+}
+.btn-transparent{
+    border: solid black;
+    border-radius: 22px 22px;
+    border-width: thin;
+}
+.background_crear{
+    background-image: url("../../photos/fons.jpg");}
+
+.margin-1{
+    margin-bottom: 22px;
+    padding-top: 12px;
+}
+
+.error_message_footer {
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+
+.navbar a{
+    border-color: orange;
+    color: orange !important;
+    cursor: pointer;
+}
+.navbar a:hover{
+    border-color: antiquewhite !important;
+    color: antiquewhite !important;
+}
+
+.navbar .btn:focus{
+    box-shadow: none;
+}
+.navbar button{
+    border-color: orange;
+    color: orange;
+}
+.btn-transparent-border{
+    border: transparent;
+    border-radius: 22px 22px;
+    border-width: thin;
+
+}
+.btn-background:hover{
+    background-color:transparent;
+    border: solid orange 1px;
+    color: orange !important;
+}
+.btn-background{
+    background-color: orange;
+    color: white !important;
+    cursor: pointer;
+}
+
+.profile-image-review{
+    width: 20%;
+    height: 50px;
+    object-fit: cover;
+}
+
+.review-card{
+    display: inline;
+}
+
+.separator{
+    margin-top: 1em;
+    padding-top: 3em;
+    border-top: solid lightgray 1px;
+}
+
+.review-image{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.review-link{
+    color: gray;
+}
+.titol_crear{
+    color: orange;
+    font-weight: bold;
+    margin-left: 1em;
+}
+.margin-form{
+    margin-top: 1em;
+    padding-bottom: 2em;
+}
+.margin-form div p {
+    margin-bottom: 0.3em;
+    font-weight: lighter;
+    font-size: 1.3em;
+    color: gray;
+    margin-top: 1.5em;
+}
+.formulari{
+    font-size: 15px;
+    font-weight: lighter;
+    width: 50%;
+}
+.precio{
+    height: 32px;
+    width: 10%;
+    color: grey;
+}
+.categoria{
+    border: none;
+    width: 50%;
+    font-size: 15px;
+    font-weight: lighter;
+    height: 33px;
+    color: gray;
+    font-weight: lighter;
+}
+.input-group-btn{
+    background-color: antiquewhite;
+    color: white;
+}
+.btn-file{
+    background-color:antiquewhite;
+    color:black;
+    border-color: black;
+}
+.boder-top{
+    border-top: solid lightgray 1px;
+}
+.boder-top div.row{
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.caracteristicas{
+    padding-top: 2em;
+    margin-top: 1em;
+}
+.titulo-m{
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+.titulo-s{
+    font-size: 1em;
+}
+.titulo-xs{
+    font-size: 0.8em;
+    margin-bottom: 1px;
+}
+.texto-s{
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+.subtitulo-s{
+    font-size: 1.1em;
+    font-weight: lighter;
+}
+.txt-center{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: lighter;
+    font-size: medium;
+}
+.comprar{
+    width: 151px;
+    height: 25px;
+    position: relative;
+    border-radius: 9px;
+}
+.comprar:hover{
+    color: orange;
+    border-color: orange;
+}
+.background_product {
+    background-color: antiquewhite;
+}
+
+.branding-image {
+    width: 1920px;
+    height: 400px;
+}
+
+.branding-image-temporal {
+    max-width: 1920px;
+    max-height: 400px;
+    object-fit: fill;
+}
+
+.img-shop {
+    max-width:150px;
+    max-height:150px;
+    object-fit: cover;
+}
+
+.img-profile {
+    max-width:100px;
+    max-height:100px;
+    object-fit: cover;
+}
+
+.separator{
+    padding-top: 50px;
+}
+
+.img-icon{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.img-card{
+    max-width: 250px;
+    max-height: 250px;
+}
+.buscador {
+    border: none;
+    border-radius: 7px;
+    padding-left: 6px;
+    height: 33px;
+}
+.input-search {
+    width: 33em !important;
+    background-color:lightgray;
+}
+.form-control:focus {
+    border-color: lightgray;
+    outline: 0;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+}
+.custom-select.select-search {
+    background-color: antiquewhite;
+    color:  orange;
+    border: none;
+    margin-right: -4px;
+    border-radius: 23px 0px 0px 22px;
+}
+.custom-select.select-search:hover {
+    background-color: orange;
+    color:  antiquewhite;
+}
+.custom-select.select-search option:hover {
+    background-color: orange;
+    color:  antiquewhite;
+}
+.btn.btn-outline-success.my-2.my-sm-0 {
+    background-color:  antiquewhite;
+    border: none;
+    margin-left: -3px;
+    border-radius: 0px 22px 22px 0px;
+}
+.btn.btn-outline-success.my-2.my-sm-0:hover {
+    background-color:  orange;
+    color:antiquewhite;
+}
+.custom-select:focus {
+    border-color: lightgray;
+    outline: 0;
+    box-shadow: none;
+}
+.dropdown .btn{
+    border: none;
+}
+.btn.dropdown-item{
+    font-size: 11px;
+}
+.col-1{
+    text-align: center;
+    margin: 0 -7px;
+    margin-bottom: -9px;
+}
+.dropdown-menu {
+    font-size: 11px;
+    width: 116px !important;
+}
+
+.col-md-6.px-0 {
+
+    background-color: rgba(250,235,215,.9);
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+
+}
+.name-propietari {
+
+    display: block;
+    margin-top: 7px;
+    color:  black;
+    text-transform: uppercase;
+    font-size: small;
+
+}
+.container.articles p {
+
+    font-size: 36px;
+    font-weight: lighter;
+    text-decoration: underline;
+
+}
+.title-propietari {
+
+    color:   gray;
+    font-size: small;
+
+}
+.container.articles {
+
+    margin-top: 5em;
+
+}
+.profile {
+   width: 82px;
+    text-align: center;
+}
+.wrap-profile{
+    width: max-content;
+    border: solid  orange 11px;
+    border-radius: 31px;
+}
+.colum-imgProf {
+
+    justify-content: center;
+    display: flex;
+
+}
+.colum-user{
+    display: table-cell;
+    vertical-align: middle;
+}
+.table-user{
+    display: table;
+}
+.container-user{
+    margin-top: 3em;
+    margin-left: 9em;
+}
+.tiendas-fav{
+    font-size: 34px;
+    font-weight: lighter;
+    margin-top: 2.5em;
+    text-decoration: underline 1px;
+}
+.container.margin-div {
+    margin-bottom: 2em;
+    border-bottom: solid lightgray 1px;
+}
+.in {
+
+    border-bottom: solid  orange 6px;
+    border-radius: 0px;
+
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+#add_product_form_button{
+    margin-left: 22em;
+    margin-top: 2em;
+}
+#crear{
+    width: 70%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+#add_product_form input{
+    border: none;
+    border-radius: 7px;
+    padding-left: 6px;
+    height: 33px;
+}
+#titulo-producto{
+    font-weight: bold;
+    font-size: 2.5em;
+}
+#review_button{
+    margin-top: 16px;
+    margin-left: 429px;
+    height: 32px;
+    width: 107px;
+    font-size: small;
+}
+#rating{
+    height: 19px;
+    font-size: 11px;
+    color: darkgray;
+}
+#message{
+    font-size: 12px;
+    margin-top: 17px;
+}
+#logout i {
+    color: white;
+}
+#logout i:hover{
+    color: orange;
+}

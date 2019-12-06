@@ -1,0 +1,24 @@
+.img-profile{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.img-shop-icon{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.margin-url{
+    margin-left: 10px;
+}
+
+.margin-div{
+    margin-top: 50px !important;
+}
+
+p.margin-url{
+    margin-bottom: 3px;
+}
+

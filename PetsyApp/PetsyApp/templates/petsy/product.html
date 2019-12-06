@@ -1,0 +1,119 @@
+{% extends 'petsy/base.html' %}
+{% load static %}
+
+{% block links %}
+{%  endblock %}
+
+{% block content %}
+<main class ="background_product">
+        <section class="boder-top">
+
+            <div class="container">
+                <div class="row" style="justify-content: center;background-color:white">
+
+                    <div class="col-md-6">
+                        {#                        <img class="d-block w-100" src="photos/{{ img }}" alt="imagen produto">#}
+                        <div>
+                            <img class="d-block w-100 img-product" src="{{product.img.url}}" alt="imagen produto">
+                        </div>
+
+                        <div class="separator">
+                            {% for review in reviews %}
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <figure>
+                                                    <a href="#"><img src="../../../photos/{{ review.user.profile_pic }}"
+                                                                     class="img rounded-circle img-fluid" alt="foto perfil"></a>
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <p><a href="{% url 'profile' review.user.id %}"><strong>{{ review.user.username }}</strong></a> {{ review.date }}</p>
+                                                <p>
+                                                    {{ review.message }}
+                                                </p>
+                                                <figure>
+                                                    <p><a href="#" class="review-link"><img src="../../../photos/{{ product.img }}"
+                                                                                            class="img img-responsive review-image"
+                                                                                            alt="foto producto"> {{ titulo }}</a>
+                                                    </p>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {% if request.user.is_authenticated %}
+
+                            <div class="form-group">
+                                <p class="titulo-m">Danos tu opinión...</p>
+                                <form id="review_form" method="POST" action="{% url 'review_product_by_id' %}">
+                                    {% csrf_token %}
+                                    <label class="titulo-xs" for="rating">Puntuación</label>
+                                    <select id="rating" name="rate">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    </select>
+                                    <br>
+                                    <textarea style="display: none;" name="product_id">
+                                        {{ product.idProduct }}
+                                    </textarea>
+                                    <textarea placeholder="Escribe aquí tu reseña..." class="form-control" id="message" rows="3" name="review"></textarea>
+                                    <button type="submit" class="btn btn-background" id="review_button">Enviar reseña</button>
+
+                                </form>
+                            </div>
+                        {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="{% url 'shop' product.shop.id_shop %}">{{ product.shop.shop_name }}</a>
+                        <h2 id="titulo-producto">{{ product.nameProduct }}</h2>
+                        <p class="subtitulo-s">{{ product.description }}</p>
+                        <p><b>{{ product.price }}€</b></p>
+                        {% if request.user.is_authenticated %}
+                        <div class="display-grid">
+                            <form method="post">
+                            {% csrf_token %}
+                                <p class="titulo-xs">Cantidad</p>
+                                <select name="quantity"  class="mdb-select md-form" style="width: 43%;margin-bottom: 1em;">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select><br>
+                                <button type="submit" class="btn btn-transparent comprar"><p class="txt-center">Añadir a la cesta</p></button>
+                            </form>
+                        </div>
+                        {% endif %}
+                        <div class="border-top caracteristicas">
+                            <p class="titulo-s"><b>Información del producto</b></p>
+                            <p class="titulo-xs"><b>Categoria</b></p>
+                            <p class="texto-s" style="font-size: 0.8em;font-weight: lighter;">{{ product.category }}</p>
+                            <p class="titulo-xs"><b>Materiales</b></p>
+                            <p class="texto-s" >{{ product.materials }}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+    </section>
+</main>
+
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'js/pages/product.js' %}"></script>
+{% endblock %}

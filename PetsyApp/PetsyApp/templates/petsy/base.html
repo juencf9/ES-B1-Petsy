@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        
+        <title>Petsy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shirnk-to-fit=no">
+
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link href="{% static "css/all.css" %}" rel="stylesheet">
+        {% block links %}{% endblock %}
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar navbar-light">
+              <a class="navbar-brand" href="/">
+                <img src="/static/images/Petsy.png" alt="Logo" style="width: 5em;">
+              </a>
+              <form class="form-inline" method="GET" action="{% url 'search' %}">
+                <div class="input-group buscador">
+                  <div class="input-group-prepend">
+                    <select class="custom-select select-search" name="type">
+                        <option value="product">Productos</option>
+                        <option value="shop">Tiendas</option>
+                        <option value="user">Usuarios</option>
+                    </select>
+                  </div>
+                  <input type="text" class="form-control input-search" placeholder="Buscar articulos y tiendas" aria-label="Search" name="q">
+                  <button  class="btn btn-outline-success my-2 my-sm-0" action="{% url 'search' %}" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+              <div class="form-inline" id="ul_navbar">
+                {% if not request.user.is_authenticated %}
+                    <div><a href="#" style="margin-right: 30px" data-toggle="modal" data-target="#register_modal"  class="btn btn-transparent-border"><i id="register_label"></i> Registrarse</a></div>
+                    <div><a href="#"  data-toggle="modal" data-target="#login_modal" class="btn btn-transparent"><i id="login_label"></i> Iniciar Sesión</a></div>
+                {% else %}
+
+                    <div class="form-inline">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                    <div class="dropdown">
+                                      <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="far fa-user-circle"></i>
+                                      </a>
+                                        <div class="dropdown-menu">
+                                          <a class="dropdown-item" href ="{% url 'profile' request.user.id %}"> Perfil </a>
+                                          <div class="dropdown-divider"></div>
+                                            <form action="{% url 'logout' %}" method="POST">
+                                                {%  csrf_token %}
+                                                <button  class=" btn dropdown-item" type="submit" id="logout_button">Cerrar sessión</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <div class="dropdown">
+                                      <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         <i class="fas fa-store"></i>
+                                      </a>
+                                        <div class="dropdown-menu">
+                                            {% for shop in list_shops %}
+                                                <a href="{% url 'shop' shop.id_shop %}" class="dropdown-item">
+                                                   {{ shop.shop_name }}
+                                                </a>
+                                            {% endfor %}
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item"><i class="fas fa-plus"></i> Añadir producto</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-1">
+                                     <a>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-1">
+                                        <span> {{ request.user.username }}</span>
+                                </div>
+                                <div class="col-1">
+                                    <a>
+                                        <span>Tus tiendas</span>
+                                    </a>
+                                </div>
+                                <div class="col-1">
+                                     <a>
+                                        <span>Carrito</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                {% endif %}
+
+                </div>
+            </nav>
+        </header>
+
+        <!-- Modal Registro -->
+        <div class="modal fade" id="register_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="exampleModalLongTitle">Crea tu cuenta</h3>
+                <h5 class="modal-title" id="exampleModalLongTitle">Registrarse es muy fácil.</h5>
+
+              </div>
+              <form id="register_form" class="my-form-register" method="POST" action="{% url 'register' %}">
+              <div class="modal-body">
+                    {% csrf_token %}
+
+                    <label for="email">Dirección de correo electrónico *:</label>
+                    <br>
+                    <input type="text" name="email" value="" id="email" required>
+                    <br>
+                    <br>
+                    <label for="username">Nombre *:</label>
+                    <br>
+                    <input type="text" name="username" value="" id="username" required>
+                    <br>
+                    <br>
+                    <label for="password">Contraseña *:</label>
+                    <br>
+                    <input type="password" name="password" value="" id="password" required>
+                    <br><br>
+                    <input type="hidden" name="next" value="{{ next|escape }}" />
+                    <br>
+
+                </div>
+              <div class="modal-footer">
+                <p id="register_error_msg" class="error_message_footer"></p>
+                <button type="submit" class="btn btn-secondary" id="register_button">Registrarme</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal Login -->
+        <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="exampleModalLongTitle">Inicia sesión para continuar</h3>
+
+              </div>
+              <form id="login_form" class="my-form-login" method="POST" action="{% url 'login' %}">
+              <div class="modal-body">
+                    {% csrf_token %}
+
+                    <label for="email_login">Dirección de correo electrónico *:</label>
+                    <br>
+                    <input type="text" name="email_login" value="" id="email_login" required>
+                    <br>
+                    <br>
+                    <label for="password_login">Contraseña *:</label>
+                    <br>
+                    <input type="password" name="password_login" value="" id="password_login" required>
+                    <input type="hidden" name="next" value="{{ next|escape }}" />
+                    <br>
+                </div>
+              <div class="modal-footer">
+                  <p id="login_error_msg" class="error_message_footer"></p>
+                  <button type="submit" class="btn btn-secondary" id="login_button">Entrar</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+     <div class=content>
+        {% block content %}{% endblock %}
+
+    </div>
+
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script defer src="{% static "js/all.js" %}"></script>
+    <script src="{% static "js/scripts.js" %}"></script>
+    <script></script>
+    {% block scripts %} {% endblock %}
+
+</html>
+
