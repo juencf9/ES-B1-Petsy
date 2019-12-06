@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6076208e-f158-49f2-9ad4-be5dd3781224" name="Default Changelist" comment="US7 profile integrado con back, eliminacion app productManagerApp">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PetsyApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PetsyApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetsyApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PetsyApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PetsyApp" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="DavidAlvarezRios &lt;dalvarezrios@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="dev" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="UB-ES-19" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="B1-Petsy" />
+  </component>
+  <component name="ProjectId" id="1RNkRUKtdbSxwS4XrZKdIAGShg7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/templates/petsy" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Naila\Desktop\B1-Petsy\PetsyApp\photos" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="PetsyApp" type="Python.DjangoServer" factoryName="Django server">
+      <module name="PetsyApp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="PetsyApp.settings" />
+      </envs>
+      <option name="SDK_HOME" value="docker-compose://[$PROJECT_DIR$/docker-compose.yml]:web/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="0.0.0.0" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6076208e-f158-49f2-9ad4-be5dd3781224" name="Default Changelist" comment="" />
+      <created>1569514932425</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569514932425</updated>
+      <workItem from="1569514934833" duration="1262000" />
+      <workItem from="1569772471577" duration="1333000" />
+      <workItem from="1569773919088" duration="14582000" />
+      <workItem from="1569839037088" duration="601000" />
+      <workItem from="1569873921950" duration="5299000" />
+      <workItem from="1570283578864" duration="6046000" />
+      <workItem from="1570377891099" duration="1255000" />
+      <workItem from="1570380199316" duration="3572000" />
+      <workItem from="1570566146081" duration="2909000" />
+      <workItem from="1570569196553" duration="4004000" />
+      <workItem from="1570634951560" duration="2854000" />
+      <workItem from="1570714717357" duration="385000" />
+      <workItem from="1570789419241" duration="74000" />
+      <workItem from="1570958092745" duration="364000" />
+      <workItem from="1570973038107" duration="6421000" />
+      <workItem from="1571080045513" duration="970000" />
+      <workItem from="1571130276783" duration="423000" />
+      <workItem from="1571146873944" duration="231000" />
+      <workItem from="1571164004795" duration="761000" />
+      <workItem from="1571164863192" duration="2334000" />
+      <workItem from="1571169177131" duration="505000" />
+      <workItem from="1571223427392" duration="325000" />
+      <workItem from="1572025749126" duration="884000" />
+      <workItem from="1572075913906" duration="1007000" />
+      <workItem from="1572082210882" duration="529000" />
+      <workItem from="1572203816864" duration="8060000" />
+      <workItem from="1572273110460" duration="2817000" />
+      <workItem from="1572279960706" duration="2597000" />
+      <workItem from="1572452390235" duration="1850000" />
+      <workItem from="1572454394172" duration="407000" />
+      <workItem from="1572459276551" duration="332000" />
+      <workItem from="1572459643160" duration="874000" />
+      <workItem from="1572460602915" duration="10307000" />
+      <workItem from="1572720962098" duration="718000" />
+      <workItem from="1572721916892" duration="1237000" />
+      <workItem from="1572723395111" duration="2283000" />
+      <workItem from="1572726805951" duration="11001000" />
+      <workItem from="1572813252844" duration="444000" />
+      <workItem from="1574525149862" duration="2753000" />
+      <workItem from="1574617885045" duration="769000" />
+      <workItem from="1574714050711" duration="6905000" />
+      <workItem from="1574721145201" duration="1301000" />
+      <workItem from="1574800741591" duration="3814000" />
+      <workItem from="1574844941953" duration="245000" />
+      <workItem from="1575382871159" duration="2474000" />
+      <workItem from="1575387851512" duration="2440000" />
+      <workItem from="1575393278869" duration="3091000" />
+      <workItem from="1575642892903" duration="4754000" />
+      <workItem from="1575650108664" duration="1918000" />
+    </task>
+    <task id="LOCAL-00001" summary="a">
+      <created>1569773847927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569773847927</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mandamos desde client el formulario al backend">
+      <created>1569874284219</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569874284219</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refresco log in OK">
+      <created>1570040312568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570040312568</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Tema URL login OK">
+      <created>1570040894589</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570040894589</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Solucion tema errores ajax prev">
+      <created>1570289872235</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570289872235</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Solucion tema errores ajax prev">
+      <created>1570382492360</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570382492361</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Login con AJAX ok">
+      <created>1570573371334</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570573371334</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Errores front OK">
+      <created>1570638125899</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1570638125899</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Create product form">
+      <created>1570982836414</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570982836414</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Form US5 crear producto OK">
+      <created>1571168970316</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571168970316</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Pagina crear millorada">
+      <created>1572453568457</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572453568457</updated>
+    </task>
+    <task id="LOCAL-00012" summary="US5 acabada (solved: save img, category context, product form.py)">
+      <created>1572641112906</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572641112906</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Pagina crear millorada">
+      <created>1572725654601</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572725654601</updated>
+    </task>
+    <task id="LOCAL-00014" summary="US7 profile integrado con back, eliminacion app productManagerApp">
+      <created>1572738223723</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572738223723</updated>
+    </task>
+    <task id="LOCAL-00015" summary="US9 terminada a espera de revision">
+      <created>1574722382397</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1574722382397</updated>
+    </task>
+    <task id="LOCAL-00016" summary="US6 acabada, un usuario puede marcar como favorita una tienda y ver sus tiendas favoritas en el perfil">
+      <created>1574804576360</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1574804576360</updated>
+    </task>
+    <task id="LOCAL-00017" summary="US6 implementar listas de usuarios, mostrar tiendas favoritas y solucionar bugs surgidos">
+      <created>1574812249102</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1574812249102</updated>
+    </task>
+    <task id="LOCAL-00018" summary="BBDD ok, docker en camino">
+      <created>1575406346858</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1575406346858</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Docker implementado">
+      <created>1575409064983</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575409064983</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a" />
+    <MESSAGE value="mandamos desde client el formulario al backend" />
+    <MESSAGE value="Refresco log in OK" />
+    <MESSAGE value="Tema URL login OK" />
+    <MESSAGE value="Solucion tema errores ajax prev" />
+    <MESSAGE value="Login con AJAX ok" />
+    <MESSAGE value="Errores front OK" />
+    <MESSAGE value="Create product form" />
+    <MESSAGE value="Form US5 crear producto OK" />
+    <MESSAGE value="US5 acabada (solved: save img, category context, product form.py)" />
+    <MESSAGE value="Pagina crear millorada" />
+    <MESSAGE value="US7 profile integrado con back, eliminacion app productManagerApp" />
+    <MESSAGE value="US9 terminada a espera de revision" />
+    <MESSAGE value="US6 acabada, un usuario puede marcar como favorita una tienda y ver sus tiendas favoritas en el perfil" />
+    <MESSAGE value="US6 implementar listas de usuarios, mostrar tiendas favoritas y solucionar bugs surgidos" />
+    <MESSAGE value="BBDD ok, docker en camino" />
+    <MESSAGE value="Docker implementado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker implementado" />
+  </component>
+</project>
