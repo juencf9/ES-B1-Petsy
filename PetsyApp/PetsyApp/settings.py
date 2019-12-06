@@ -27,7 +27,7 @@ SECRET_KEY = 'khewbccmp1(#^d98h*%h@h#7)@oo23)h6f%9bpydv(-fc9#$=6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ["127.0.0.1", '0.0.0.0', ".herokuapp.com"]
 
 
 # Application definition
@@ -90,6 +90,7 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -143,3 +144,5 @@ MEDIA_URL = '/photos/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'photos')
 
 LOGIN_URL = "index"
+
+django_heroku.settings(locals())
