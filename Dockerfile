@@ -13,12 +13,12 @@ RUN mkdir /code
 WORKDIR /code
 
 # Copy the current directory contents into the container at /music_service
-ADD . /code/
+ADD app /code/
 
 # Install any needed packages specified in requirements.txt
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY app .
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
