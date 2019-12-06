@@ -1,0 +1,153 @@
+{% extends 'petsy/base.html' %}
+{% load static %}
+
+{% block links %}
+
+        <link href="{% static 'css/fileinput.min.css' %}" rel="stylesheet">
+        <link href="{% static 'themes/explorer/theme.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/profile.css'%}" rel="stylesheet">
+        <script src="{% static 'js/follow.js' %}"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+
+
+
+{% endblock %}
+
+{% block content %}
+<main>
+    <section>
+        <div class="container container-user" style="margin-top: 3em;">
+            <div class="row table-user">
+                <div class="col-2 colum-imgProf">
+                    <div class="wrap-profile">
+                        <img class="profile" src="{% static 'images/default.png' %}">
+                    </div>
+                </div>
+                <div class="col-4 colum-user">
+                    <p style="font-size: 40px;font-weight: lighter;">{{ user.username }}
+                        <a href="" class="text-dark" style="font-size: 15px;font-weight: lighter;margin-left: 1em"><i class="far fa-edit"></i>Editar perfil</a>
+                    </p>
+                    <a class="text-dark" style="font-weight: lighter;" href="{% url 'profile_followers' user.id "following" %}">Sigue a <span><b> {{following}}</b></span></a>&nbsp;
+                    <a class="text-dark" style="font-weight: lighter;" href="{% url 'profile_followers' user.id "follower" %}"><b id="follower_id"> {{followers}}</b> seguidores</a>
+
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.id != user.id %}
+                            {% if not follow %}
+                                <button type="button" class="btn btn-secondary" id="follow_user" onclick="follow('{{ user.id }}','{{ csrf_token }}', this, $('#follower_id')[0])">Seguir usuario</button>
+                            {% else %}
+                                <button type="button" class="btn btn-secondary" id="follow_user" onclick="follow('{{ user.id }}','{{ csrf_token }}', this, $('#follower_id')[0])">Dejar de seguir</button>
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container margin-div">
+            <div class="row">
+                <div class="col-4">
+                    <button class="btn in" id="tfavs">Tiendas favoritas</button>
+                </div>
+                 <div class="col-4">
+                    <button class="btn" id="pfavs">Productos favoritos</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="container" id="container-tfav">
+            <div class="row">
+                <div class="col-12">
+                    {% for shop in list_items %}
+                        {% if forloop.counter0 == 0 or forloop.counter0|divisibleby:4 %}
+                            <div class="row">
+                                <div class="card-deck">
+                                    <div class="card text-center">
+                                        <a href="{% url 'shop' shop.shop_faved.id_shop %}">
+                                            <img class="card-img-top img-products-shop" src="{% static 'images/shop-icon.png' %}" alt="Card image cap">
+                                        </a>
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">{{ shop.shop_name }}</h5>
+                                            <a href="{% url 'profile' shop.shop_faved.user_owner.id %}" class="card-text"><small class="text-muted">{{ shop.shop_faved.user_owner.username }}</small></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% elif forloop.counter0|divisibleby:3 or forloop.last %}
+                            <div class="card text-center">
+                                <a href="{% url 'shop' shop.shop_faved.id_shop %}">
+                                    <img class="card-img-top img-products-shop" src="{% static 'images/shop-icon.png' %}" alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">{{ shop.shop_name }}</h5>
+                                    <a href="{% url 'profile' shop.shop_faved.user_owner.id %}" class="card-text"><small class="text-muted">{{ shop.shop_faved.user_owner.username }}</small></a>
+
+                                </div>
+                            </div>
+
+
+                        {% else %}
+                            <div class="card text-center">
+                                <a href="{% url 'shop' shop.shop_faved.id_shop %}">
+                                    <img class="card-img-top img-products-shop" src="{% static 'images/shop-icon.png' %}" alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">{{ shop.shop_name }}</h5>
+                                    <a href="{% url 'profile' shop.shop_faved.user_owner.id %}" class="card-text"><small class="text-muted">{{ shop.shop_faved.user_owner.username }}</small></a>
+
+                                </div>
+                            </div>
+                        {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+         <div class="container" id="container-pfav" style="display: none" >
+             <div class="row">
+                 <div class="col-12">
+                      {% for product in list_products %}
+                                {% if forloop.counter0 == 0 or forloop.counter0|divisibleby:4 %}
+                                    <div class="row">
+                                        <div class="card-deck">
+                                            <div class="card">
+                                                <img class="card-img-top img-card" src="{{product.img.url}}" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">{{ product.nameProduct }}</h5>
+                                                    <p class="card-text">{{ product.description }}</p>
+                                                    <a href="{% url 'product_by_id' product.idProduct %}" class="card-text stretched-link"></a>
+                                                </div>
+                                            </div>
+
+                                {% elif forloop.counter0|divisibleby:3 or forloop.last %}
+                                            <div class="card">
+                                                <img class="card-img-top img-card" src="{{product.img.url}}" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">{{ product.nameProduct }}</h5>
+                                                    <p class="card-text">{{ product.description }}</p>
+                                                    <a href="{% url 'product_by_id' product.idProduct %}" class="card-text stretched-link"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                {% else %}
+                                            <div class="card">
+                                                <img class="card-img-top img-card" src="{{product.img.url}}" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">{{ product.nameProduct }}</h5>
+                                                    <p class="card-text">{{ product.description }}</p>
+                                                    <a href="{% url 'product_by_id' product.idProduct %}" class="card-text stretched-link"></a>
+                                                </div>
+                                            </div>
+                                {% endif %}
+                            {% endfor %}
+                 </div>
+             </div>
+         </div>
+    </section>
+</main>
+{% endblock %}
+
